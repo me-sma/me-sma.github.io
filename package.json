@@ -1,0 +1,24 @@
+{
+  "name": "spende-leben",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html -p 8080 --public-url /",
+    "build": "parcel build src/index.html --public-url /spende-leben"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredicious/spende-leben.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredicious/spende-leben/issues"
+  },
+  "homepage": "https://github.com/fredicious/spende-leben#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.29.0"
+  }
+}
