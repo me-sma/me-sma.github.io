@@ -1,13 +1,13 @@
 module.exports = {
     "gifsicle": { "optimizationLevel": 2, "interlaced": false, "colors": 10 },
-    "mozjpeg": { "progressive": true, "quality": 100 },
-    "pngquant": { "quality": [1] },
+    "mozjpeg": { "progressive": true, "quality": 85 },
+    "pngquant": { "quality": [0.75, 1] },
     "svgo": {
       "plugins": [
         { "removeViewBox": false },
         { "cleanupIDs": true },
       ]
     },
-    "webp": { "quality": 100 }
+    "webp": { "quality": 99 }
   }
    
