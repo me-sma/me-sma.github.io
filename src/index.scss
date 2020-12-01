@@ -206,6 +206,12 @@ a {
     }
   }
 
+  section.hero {
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -245,4 +251,7 @@ a {
   }
 }
 
-th, td { padding: 0 10px 5px 0; }
+th,
+td {
+  padding: 0 10px 5px 0;
+}
