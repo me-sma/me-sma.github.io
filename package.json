@@ -19,6 +19,7 @@
   "homepage": "https://github.com/me-sma/me-sma.github.io#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-imagemin": "^4.0.2",
     "sass": "^1.29.0"
   }
 }
