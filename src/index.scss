@@ -74,7 +74,7 @@ html {
     }
   }
   &--primary {
-    background-color: darken($color-primary, 10);
+    background-color: $color-primary-dark;
     .title {
       color: $color-secondary;
     }
@@ -85,6 +85,19 @@ html {
   &.interlude {
     min-height: auto;
   }
+  &--secondary {
+    background-color: $color-primary-dark;
+    padding: spacing(4);
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .item {
+      text-align: center;
+      padding: spacing(2);
+    }
+  }
 }
 
 .spacer {
@@ -92,7 +105,7 @@ html {
 }
 
 footer {
-  padding: spacing(4);
+  padding: 0;
   .content {
     display: flex;
     align-items: center;
@@ -100,11 +113,14 @@ footer {
   }
   .item {
     text-align: center;
-    padding: spacing(2);
   }
   .impressum {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1rem;
+    padding-bottom: 0;
+    h4, p {
+      margin: 0;
+    }
   }
 }
 
