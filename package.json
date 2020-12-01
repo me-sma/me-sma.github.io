@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html -p 8080 --public-url /",
-    "build": "parcel build src/index.html --public-url /spende-leben"
+    "build": "parcel build src/index.html --public-url /"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fredicious/spende-leben.git"
+    "url": "git+https://github.com/me-sma/me-sma.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fredicious/spende-leben/issues"
+    "url": "https://github.com/me-sma/me-sma.github.io/issues"
   },
-  "homepage": "https://github.com/fredicious/spende-leben#readme",
+  "homepage": "https://github.com/me-sma/me-sma.github.io#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.29.0"
