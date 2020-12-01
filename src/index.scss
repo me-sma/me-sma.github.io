@@ -1,9 +1,9 @@
-$color-primary: #ffeb3b;
-$color-primary-dark: darken($color-primary, 20);
-$color-primary-light: #ffff72;
-$color-secondary: #2979ff;
-$color-secondary-dark: darken($color-secondary, 20);
-$color-secondary-light: #75a7ff;
+$color-primary: #ffca28;
+$color-primary-dark: darken($color-primary, 10);
+$color-primary-light: lighten($color-primary, 10);
+$color-secondary: #388e3c;
+$color-secondary-dark: darken($color-secondary, 10);
+$color-secondary-light: lighten($color-secondary, 10);
 $color-text: #333333;
 
 $breakpoints: (
@@ -55,11 +55,15 @@ body {
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: $color-secondary;
+      background-color: #000;
       opacity: 0.4;
       z-index: 0;
     }
+    .content {
+      padding-left: 40px;
+    }
     .title {
+      margin-left: -40px;
       color: $color-primary;
     }
     .subtitle {

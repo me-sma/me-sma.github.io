@@ -1,6 +1,6 @@
 const SECONDARY_CLASS = 'button--secondary';
 const target = document.getElementById('mainButton');
-const primarySections = Array.from(document.querySelectorAll('.section--primary'));
+const primarySections = Array.from(document.querySelectorAll('.section--primary, #spenden'));
 function throttle(fn, wait) {
   var time = Date.now();
   return function () {
@@ -32,5 +32,12 @@ function callback() {
     target.classList.remove(SECONDARY_CLASS);
   }
 }
+
+target.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('spenden').scrollIntoView({
+    behavior: 'smooth',
+  });
+});
 
 window.addEventListener('scroll', throttle(callback, 100));
