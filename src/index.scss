@@ -25,7 +25,8 @@ img {
   width: 100%;
 }
 
-body {
+body,
+html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -60,14 +61,17 @@ body {
       z-index: 0;
     }
     .content {
-      padding-left: 40px;
+      width: auto;
+      padding-top: 30vh;
     }
     .title {
-      margin-left: -40px;
       color: $color-primary;
     }
     .subtitle {
       color: #fff;
+    }
+    .text {
+      font-size: 1.3rem;
     }
   }
   &--primary {
@@ -92,20 +96,54 @@ body {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: spacing(1);
+  padding: spacing(2);
 }
 
 .title {
   font-family: 'Open Sans', sans-serif;
   color: $color-secondary-dark;
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 2.2rem;
+  margin-bottom: spacing(2);
 }
 .subtitle {
   color: $color-primary-dark;
   font-size: 1.6rem;
-  line-height: 1.1;
+  line-height: 1.8rem;
   margin-bottom: spacing(2);
+}
+.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  &--wrap {
+    display: flex;
+    flex-direction: column;
+    p {
+      padding: spacing(2);
+
+      &:nth-child(even) {
+        align-self: flex-end;
+      }
+    }
+
+    p::first-letter {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $color-secondary;
+    }
+  }
+  strong {
+    font-weight: 600;
+    color: $color-secondary;
+  }
+  i {
+    font-style: italic;
+    color: $color-secondary;
+  }
+  b {
+    font-weight: normal;
+    color: $color-secondary;
+  }
 }
 
 .button {
@@ -144,15 +182,24 @@ body {
     padding: spacing(2);
   }
   .title {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 4rem;
   }
   .subtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
   .text {
-    &--wrap {
-      column-count: 2;
-      column-gap: spacing(3);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  .text--wrap {
+    p {
+      max-width: 50%;
+
+      &::first-letter {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -183,5 +230,14 @@ body {
   .content {
     width: map-get($breakpoints, md);
     padding: spacing(3);
+  }
+
+  section.hero {
+    .content {
+      padding-left: 40px;
+    }
+    .title {
+      margin-left: -40px;
+    }
   }
 }
