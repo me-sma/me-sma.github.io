@@ -57,7 +57,7 @@ html {
       height: 100%;
       width: 100%;
       background-color: #000;
-      opacity: 0.4;
+      opacity: 0.5;
       z-index: 0;
     }
     .content {
@@ -111,6 +111,9 @@ html {
   font-size: 1.6rem;
   line-height: 1.8rem;
   margin-bottom: spacing(2);
+}
+a {
+  color: $color-secondary;
 }
 .text {
   font-size: 1rem;
