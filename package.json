@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html -p 8080 --public-url /",
-    "build": "parcel build src/index.html --public-url www.save-eddie-mika.de"
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
