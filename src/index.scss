@@ -92,6 +92,19 @@ html {
   height: spacing(4);
 }
 
+footer {
+  padding: spacing(4);
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .item {
+    text-align: center;
+    padding: spacing(2);
+  }
+}
+
 .content {
   position: relative;
   width: 100%;
@@ -176,6 +189,11 @@ a {
   }
 }
 
+th,
+td {
+  padding: 0 10px 5px 0;
+}
+
 @include media-up(sm) {
   body {
     font-size: 18px;
@@ -249,9 +267,12 @@ a {
       margin-left: -40px;
     }
   }
-}
-
-th,
-td {
-  padding: 0 10px 5px 0;
+  footer {
+    .content {
+      flex-direction: row;
+    }
+    .item {
+      width: 50%;
+    }
+  }
 }
