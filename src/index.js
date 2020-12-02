@@ -4,6 +4,7 @@ const SHOW_CLASS = 'show';
 const target = document.getElementById('mainButton');
 const donationSection = Array.from(document.querySelectorAll('#spenden'))[0];
 const primarySections = Array.from(document.querySelectorAll('.section--primary, #spenden'));
+
 function throttle(fn, wait) {
   var time = Date.now();
   return function () {
@@ -56,3 +57,20 @@ target.addEventListener('click', (e) => {
 });
 
 window.addEventListener('scroll', throttle(callback, 100));
+
+const copyToClipboard = document.getElementsByClassName('copy');
+Array.from(copyToClipboard).forEach((element) => {
+  element.addEventListener('click', () => document.execCommand('copy'));
+  element.addEventListener('copy', (event) => {
+    event.preventDefault();
+    if (event.clipboardData) {
+      let text = element.parentElement.textContent;
+      if (typeof element.dataset.removeSpaces !== 'undefined') {
+        text = text.replace(/\s/g, '');
+      }
+      event.clipboardData.setData('text/plain', text);
+      console.log(event.clipboardData.getData("text"))
+    }
+  });
+
+});

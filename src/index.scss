@@ -211,6 +211,7 @@ a {
     table {
       display: inline-block;
       border: 1px solid $color-primary;
+      border-collapse: collapse;
     }
     p {
       margin: 0;
@@ -248,9 +249,23 @@ a {
   }
 }
 
-th,
+
 td {
-  padding: 0 10px 5px 0;
+  padding: 5px 5px 5px 5px;
+  display: block;
+  &:last-child {
+    border: none;
+  }
+  &:hover .copy.icon{
+    visibility: visible;
+  }
+}
+
+tr {
+  border-bottom: 1px solid $color-primary;
+  &:last-child {
+    border: none;
+  }
 }
 
 .donate-note {
@@ -266,6 +281,30 @@ td {
 .hide {
   opacity: 0;
   transition: opacity 350ms;
+}
+
+.copy.icon {
+  visibility: hidden;
+  cursor: pointer;
+  width: 8px;
+  height: 11px;
+  border: solid 1px $color-primary-dark;
+  border-radius: 1px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 6px;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 8px;
+    height: 11px;
+    border-top: solid 1px $color-primary-dark;
+    border-left: solid 1px $color-primary-dark;
+    border-radius: 1px 0 0 0;
+  }
 }
 
 @include media-up(sm) {
@@ -333,16 +372,13 @@ td {
         padding: spacing(2);
       }
 
-      p a {
+      p {
         font-size: 1rem;
       }
     }
   }
-  .button {
-    padding: spacing(2) spacing(3);
-    font-size: 1rem;
-  }
 }
+
 @include media-up(md) {
   .content {
     width: map-get($breakpoints, md);
@@ -358,5 +394,18 @@ td {
     }
   }
   footer {
+  }
+
+  .button {
+    padding: spacing(2) spacing(3);
+    font-size: 1rem;
+  }
+
+  td {
+    display: table-cell;
+    border-right: 1px solid $color-primary;
+    &:first-child {
+      padding-left: 0;
+    }
   }
 }
