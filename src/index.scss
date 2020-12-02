@@ -120,7 +120,8 @@ footer {
     font-size: 0.7rem;
     line-height: 1rem;
     padding-bottom: 0;
-    h4, p {
+    h4,
+    p {
       margin: 0;
     }
   }
@@ -257,10 +258,7 @@ td {
   body {
     font-size: 18px;
   }
-  .content {
-    width: map-get($breakpoints, sm);
-    padding: spacing(2);
-  }
+
   .title {
     font-size: 3rem;
     line-height: 4rem;
