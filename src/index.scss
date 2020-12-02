@@ -215,19 +215,17 @@ a {
     p {
       margin: 0;
       padding-top: spacing(2);
-      a {
-        font-size: 0.8rem;
-      }
     }
   }
 }
 
 .button {
-  padding: spacing(2) spacing(3);
+  padding: spacing(2) spacing(1);
   background-color: $color-primary;
   text-decoration: none;
   color: $color-text;
   transition: all 0.1s ease-in-out;
+  font-size: 0.7rem;
 
   &:hover {
     background-color: $color-primary-dark;
@@ -238,6 +236,7 @@ a {
     position: fixed;
     top: spacing(2);
     right: spacing(2);
+    font-size: 1rem;
   }
 
   &--secondary {
@@ -252,6 +251,11 @@ a {
 th,
 td {
   padding: 0 10px 5px 0;
+}
+
+.donate-note {
+  text-align: center;
+  font-size: 0.5rem;
 }
 
 @include media-up(sm) {
@@ -324,6 +328,10 @@ td {
       }
     }
   }
+  .button {
+    padding: spacing(2) spacing(3);
+    font-size: 1rem;
+  }
 }
 @include media-up(md) {
   .content {
@@ -341,9 +349,4 @@ td {
   }
   footer {
   }
-}
-
-.donate-note {
-  text-align: center;
-  font-size: 0.5rem;
 }
