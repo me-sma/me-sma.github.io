@@ -69,8 +69,6 @@ Array.from(copyToClipboard).forEach((element) => {
         text = text.replace(/\s/g, '');
       }
       event.clipboardData.setData('text/plain', text);
-      console.log(event.clipboardData.getData("text"))
     }
   });
-
 });

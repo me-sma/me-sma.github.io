@@ -209,7 +209,7 @@ a {
     justify-content: space-between;
 
     table {
-      display: inline-block;
+      display: table;
       border: 1px solid $color-primary;
       border-collapse: collapse;
       padding: spacing(2);
@@ -249,17 +249,16 @@ a {
     }
   }
 }
-
+td, tr, table, tbody {
+  width: 100%;
+  display: block;
+}
 
 td {
   padding: 5px 5px 5px 5px;
-  display: block;
-  white-space:nowrap;
+  white-space: nowrap;
   &:last-child {
     border: none;
-  }
-  &:hover .copy.icon{
-    visibility: visible;
   }
 }
 
@@ -370,9 +369,19 @@ tr {
     .col {
       width: 50%;
 
+      table {
+        padding: spacing(2);
+      }
+
       p {
         font-size: 1rem;
       }
+    }
+  }
+
+  td {
+    &:hover .copy.icon{
+      visibility: visible;
     }
   }
 }
