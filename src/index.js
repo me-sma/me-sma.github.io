@@ -1,5 +1,8 @@
 const SECONDARY_CLASS = 'button--secondary';
+const HIDE_CLASS = 'hide';
+const SHOW_CLASS = 'show';
 const target = document.getElementById('mainButton');
+const donationSection = Array.from(document.querySelectorAll('#spenden'))[0];
 const primarySections = Array.from(document.querySelectorAll('.section--primary, #spenden'));
 function throttle(fn, wait) {
   var time = Date.now();
@@ -26,11 +29,23 @@ function callback() {
   const changeClass = primarySections.reduce((previousValue, element) => {
     return previousValue || inside(element, target);
   }, false);
+
+  const buttonInsideDonationSection = inside(donationSection, target)
+
+  if (buttonInsideDonationSection) {
+    target.classList.remove(SHOW_CLASS);
+    target.classList.add(HIDE_CLASS);
+  } else {
+    target.classList.remove(HIDE_CLASS);
+    target.classList.add(SHOW_CLASS);
+  }
+
   if (changeClass) {
     target.classList.add(SECONDARY_CLASS);
   } else {
     target.classList.remove(SECONDARY_CLASS);
   }
+
 }
 
 target.addEventListener('click', (e) => {

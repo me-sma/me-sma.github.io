@@ -258,6 +258,16 @@ td {
   font-size: 0.5rem;
 }
 
+.show {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
 @include media-up(sm) {
   body {
     font-size: 18px;
