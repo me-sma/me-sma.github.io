@@ -3,7 +3,7 @@ const HIDE_CLASS = 'hide';
 const SHOW_CLASS = 'show';
 const target = document.getElementById('mainButton');
 const donationSection = Array.from(document.querySelectorAll('#spenden'))[0];
-const primarySections = Array.from(document.querySelectorAll('.section--primary, #spenden'));
+const primarySections = Array.from(document.querySelectorAll('.section--primary, .family'));
 
 function throttle(fn, wait) {
   var time = Date.now();
