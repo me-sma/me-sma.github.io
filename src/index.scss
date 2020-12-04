@@ -267,6 +267,10 @@ td {
 
   ul {
     justify-content: center;
+
+    li {
+      min-width: 0 !important;
+    }
   }
 }
 
