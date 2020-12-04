@@ -8,6 +8,7 @@ $color-text: #333333;
 
 $breakpoints: (
   xs: 0px,
+  s: 340px,
   sm: 600px,
   md: 960px,
   lg: 1280px,
@@ -31,7 +32,7 @@ body,
 html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: $color-text;
 }
 .primary {
@@ -73,6 +74,48 @@ html {
     }
     .text {
       font-size: 1.3rem;
+    }
+  }
+  &.partner {
+    background: $color-secondary;
+    color: white;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: $color-primary-light;
+      }
+    }
+
+    .item {
+      padding: 0;
+      width: 100%;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    .partner-list {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+
+      span {
+        font-style: italic;
+      }
+    }
+    
+
+    ul li{
+      display: inline;
+      list-style-type:none;
+      padding: 0;
+      margin: 0;
     }
   }
   &--primary {
@@ -395,6 +438,12 @@ tr {
     &:hover .copy.icon{
       visibility: visible;
     }
+  }
+}
+
+@include media-up(s) {
+  html, body {
+    font-size: 20px;
   }
 }
 
