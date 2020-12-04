@@ -24,6 +24,7 @@ $spacing: 8px;
 
 img {
   width: 100%;
+  margin-top: -5px;
 }
 * {
   box-sizing: border-box;
@@ -143,6 +144,10 @@ html {
       padding: spacing(2);
     }
   }
+
+  &--clear {
+    margin-bottom: -5px;
+  }
 }
 
 .spacer {
@@ -229,9 +234,8 @@ a {
 }
 .cols {
   display: flex;
-  align-items: center;
   padding-top: spacing(4);
-  align-items: stretch;
+  align-items: flex-start;
   flex-direction: column;
 
   h4 {
@@ -245,11 +249,10 @@ a {
     padding: spacing(2);
     align-items: center;
     align-content: center;
-    text-align: center;
     display: flex;
-    justify-items: space-between;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 
     table {
       display: table;
@@ -348,7 +351,7 @@ tr {
   border-radius: 1px;
   position: absolute;
   margin-left: 5px;
-  margin-top: 6px;
+  margin-top: 15px;
   &:before {
     content: "";
     display: block;
@@ -419,21 +422,6 @@ tr {
     }
   }
 
-  .cols {
-    flex-direction: row;
-    .col {
-      width: 50%;
-
-      table {
-        padding: spacing(2);
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  }
-
   td {
     &:hover .copy.icon{
       visibility: visible;
@@ -479,6 +467,22 @@ tr {
     border-right: 1px solid $color-primary;
     &:first-child {
       padding-left: 5px;
+    }
+  }
+
+  .cols {
+    flex-direction: row;
+    .col {
+      min-width: 500px;
+
+      table {
+        padding: spacing(2);
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 85px;   
+      }
     }
   }
 }
