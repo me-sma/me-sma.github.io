@@ -49,14 +49,16 @@ function callback() {
 
 }
 
-target.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.getElementById('spenden').scrollIntoView({
-    behavior: 'smooth',
+if (target) {
+  target.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('spenden').scrollIntoView({
+      behavior: 'smooth',
+    });
   });
-});
+  window.addEventListener('scroll', throttle(callback, 100));
+}
 
-window.addEventListener('scroll', throttle(callback, 100));
 
 const copyToClipboard = document.getElementsByClassName('copy');
 Array.from(copyToClipboard).forEach((element) => {
@@ -85,7 +87,13 @@ Array.from(copyToClipboard).forEach((element) => {
   }
 
   const userLang = navigator.language || navigator.userLanguage; 
-  if (userLang.startsWith('en') && !href.endsWith('?de') && !href.includes('/en/')) {
+  if (
+    userLang.startsWith('en')
+    && !href.endsWith('?de') 
+    && !href.includes('/en/')
+    && !href.includes('impressum')
+    && !href.includes('datenschutz')
+    ) {
     return window.location.assign('/en/index.html')
   }
 })();
