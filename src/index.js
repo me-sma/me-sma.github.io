@@ -72,3 +72,20 @@ Array.from(copyToClipboard).forEach((element) => {
     }
   });
 });
+
+
+(function() {
+  const href = window.location.href;
+  if (href.endsWith('/en/')) {
+    return window.location.assign('/en/index.html')
+  }
+
+  if (href.endsWith('/en')) {
+    return window.location.assign('/en/index.html')
+  }
+
+  const userLang = navigator.language || navigator.userLanguage; 
+  if (userLang.startsWith('en') && !href.endsWith('?de') && !href.includes('/en/')) {
+    return window.location.assign('/en/index.html')
+  }
+})();

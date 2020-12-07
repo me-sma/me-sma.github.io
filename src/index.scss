@@ -242,6 +242,15 @@ a {
   align-items: flex-start;
   flex-direction: column;
 
+  &.language {
+    padding-top: 0;
+    flex-direction: row;
+    img {
+      width: auto;
+      margin-right: 5px;
+    }
+  }
+
   h4 {
     margin: 0;
     margin-bottom: spacing(1);
