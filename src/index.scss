@@ -69,6 +69,10 @@ html {
     }
     .title {
       color: $color-primary;
+
+      img {
+        width: 25px;
+      }
     }
     .subtitle {
       color: #fff;
@@ -366,6 +370,19 @@ tr {
   }
 }
 
+@include media-up(s) {
+  html, body {
+    font-size: 20px;
+  }
+
+  .section.hero .title {
+    font-size: 1.8rem;
+    img {
+      width: 30px;
+    }
+  }
+}
+
 @include media-up(sm) {
   body {
     font-size: 18px;
@@ -396,6 +413,11 @@ tr {
   section.hero {
     .title {
       margin-bottom: 0;
+      font-size: 3rem !important;
+
+      img {
+        width: 50px !important;
+      }
     }
   }
 
@@ -426,12 +448,6 @@ tr {
     &:hover .copy.icon{
       visibility: visible;
     }
-  }
-}
-
-@include media-up(s) {
-  html, body {
-    font-size: 20px;
   }
 }
 
