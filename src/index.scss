@@ -308,6 +308,25 @@ a {
     }
   }
 }
+
+.box {
+  width: 100%;
+  color: $color-text;
+  border: 1px solid $color-primary;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+}
+
+.disabled {
+  color: #83837c;
+  background-color: #EBEBE4;
+  &:hover {
+    background-color: #EBEBE4;
+  }
+}
+
 td, tr, table, tbody {
   width: 100%;
   display: block;
@@ -497,5 +516,13 @@ tr {
         margin-top: 199px;   
       }
     }
+  }
+
+  .box {
+    width: 80%;
+    margin-top: 160px;
+    margin-bottom: -190px;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
   }
 }
